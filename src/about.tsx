@@ -15,10 +15,8 @@ function About() {
             <div>
                 responsive table with bootstrap
             </div>
-            <div>
-
-            </div>
             <div >
+                <br />
                 <Container>
                     <Row>
                         <Col sm={12} md={6} lg={2} xl={1} className="cell">always visible</Col>
