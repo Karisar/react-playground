@@ -3,6 +3,7 @@ Playing around and getting more familiar with React and Typescript
 
 getting started:
 * npm install
+* npm audit fix
 * npm start
 
 Project was generated with https://create-react-app.dev/ 
