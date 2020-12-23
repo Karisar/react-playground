@@ -1,6 +1,7 @@
 import React from 'react';
 import About from './about';
 import Contacts from './contacts';
+import Warnings from './warnings';
 
 import {
   BrowserRouter as Router,
@@ -9,7 +10,7 @@ import {
   Link
 } from "react-router-dom";
 import './App.css';
-import { faHome, faEnvelopeOpenText, faBell } from "@fortawesome/free-solid-svg-icons";
+import { faHome, faEnvelopeOpenText, faBell, faQuestionCircle } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function App() {
@@ -25,7 +26,10 @@ function App() {
               <Link to="/contacts"><FontAwesomeIcon icon={faEnvelopeOpenText} /><span className="nav-text">Contacts</span></Link>
             </li>
             <li>
-              <Link to="/about"><FontAwesomeIcon icon={faBell} /><span className="nav-text">About</span></Link>
+              <Link to="/warnings"><FontAwesomeIcon icon={faBell} /><span className="nav-text">Warnings</span></Link>
+            </li>
+            <li>
+              <Link to="/about"><FontAwesomeIcon icon={faQuestionCircle} /><span className="nav-text">About</span></Link>
             </li>
           </ul>
         </div>
@@ -33,6 +37,7 @@ function App() {
           <Switch>
             <Route exact path="/" />
             <Route path="/about" component={About} />
+            <Route path="/warnings" component={Warnings} />
             <Route path="/contacts" component={Contacts} />
           </Switch>
         </div>
