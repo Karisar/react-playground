@@ -1,64 +1,117 @@
-.App {
-  text-align: center;
+.fa {
+position: relative;
+display: table-cell;
+width: 55px;
+height: 36px;
+text-align: center;
+top:12px; 
+font-size:20px;
+
 }
 
-.App-header {
-  background-color: #7b89a5;
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  border-radius: 10px;
-  padding: 20px;
-  height: 25px;
-  margin: 20px;
+.container {
+  left:250px;
 }
 
-.App-link {
-  color: #61dafb;
+.main-menu:hover, nav.main-menu.expanded {
+width:250px;
+overflow:hidden;
+opacity:1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+
+.main-menu {
+background:#F7F7F7;
+position:absolute;
+top:0;
+bottom:0;
+height:100%;
+left:0;
+width:55px;
+overflow:hidden;
+-webkit-transition:width .2s linear;
+transition:width .2s linear;
+-webkit-transform:translateZ(0) scale(1,1);
+box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
+  opacity:1;
 }
 
-h1 {
-    font-size: 16px;
-    padding: 20px 20px 0px 0px ;
+.main-menu>ul {
+margin:20px 20px;
 }
 
-h2 {
-    font-size: 16px;
-    padding: 20px 20px 0px 0px ;
+.main-menu li {
+position:relative;
+display:block;
+width:200px;
 }
 
-p {
-  font-size: 12px;
-  padding: 20px;
-  margin: 20px;
- /* text-align: left;*/
+.main-menu li>a {
+position:relative;
+width:205px;
+display:table;
+border-collapse:collapse;
+border-spacing:0;
+color:#8a8a8a;
+font-size: 20px;
+text-decoration:none;
+-webkit-transform:translateZ(0) scale(1,1);
+-webkit-transition:all .14s linear;
+transition:all .14s linear;
+font-family: 'Strait', sans-serif;
+border-top:1px solid #f2f2f2;
+text-shadow: 1px 1px 1px  #fff;  
 }
 
-.navLink {
-  padding: 20px;
-  font-size: 15px;
-  color: white;
-  vertical-align: middle;
+
+
+.main-menu .nav-icon {
+position:relative;
+display:table-cell;
+width:55px;
+height:36px;
+text-align:center;
+vertical-align:middle;
+font-size:18px;
 }
 
-.navBar {
-  vertical-align: middle;
-  align-items: left;
+.main-menu .nav-text  {
+position:relative;
+display:table-cell;
+text-align:left;
+vertical-align:middle;
+width:140px;
+font-size: 16px;
+font-family: 'Titillium Web', sans-serif;
 }
 
-.cell {
-  border: 1px solid gray;
-  border-radius: 3px;
+.no-touch .scrollable.hover {
+overflow-y:hidden;
+}
+
+.no-touch .scrollable.hover:hover {
+overflow-y:auto;
+overflow:visible;
+  
+}
+
+a:hover,a:focus {
+text-decoration:none;
+border-left:0px solid #F7F7F7;
+}
+
+nav {
+-webkit-user-select:none;
+-moz-user-select:none;
+-ms-user-select:none;
+-o-user-select:none;
+user-select:none;
+  
+}
+
+nav ul,nav li {
+outline:0;
+margin:0;
+padding:0;
+text-transform: uppercase;
 }
