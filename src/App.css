@@ -1,3 +1,7 @@
+.header {
+  padding: 20px;
+}
+
 .fa {
 position: relative;
 display: table-cell;

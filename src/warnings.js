@@ -1,4 +1,6 @@
 import React from 'react';
+import Spinner from 'react-bootstrap/Spinner';
+import ListGroup from 'react-bootstrap/ListGroup';
 
 /*
   not using ts here.
@@ -44,21 +46,28 @@ class Warnings extends React.Component {
         if (error) {
             return <div>Error: {error.message}</div>;
         } else if (!isLoaded) {
-            return <div>Loading...</div>;
+            return <div>Loading...
+                <Spinner animation="border" variant="info" />
+            </div>;
         } else {
             return (
-                <ul>
-                    {items
-                        .filter(item => item.created_at.startsWith('2020'))
-                        .sort(function (a, b) {
-                            return new Date(b.created_at) - new Date(a.created_at);
-                        })
-                        .map(item => (
-                            <li key={item.id}>
-                                {item.city} {item.created_at}
-                            </li>
-                        ))}
-                </ul>
+                <div>
+                    <div><h3>Luikkausvaroitukset Oulussa vuonna 2020</h3></div>
+                    <div>
+                        <ListGroup>
+                            {items
+                                .filter(item => item.created_at.startsWith('2020'))
+                                .sort(function (a, b) {
+                                    return new Date(b.created_at) - new Date(a.created_at);
+                                })
+                                .map(item => (
+                                    <ListGroup.Item key={item.created_at}>
+                                        {item.city} {item.created_at}
+                                    </ListGroup.Item>
+                                ))}
+                        </ListGroup>
+                    </div>
+                </div>
             );
         }
     }
