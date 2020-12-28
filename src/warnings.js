@@ -18,8 +18,8 @@ class Warnings extends React.Component {
 
     componentDidMount() {
         /* proxy the call to avoid problems with CORS headers */
-        var proxyUrl = 'https://cors-anywhere.herokuapp.com/',
-            targetUrl = 'https://liukastumisvaroitus-api.beze.io/api/v1/warnings?filter=city:Oulu'
+        var proxyUrl = process.env.REACT_APP_WARNINGS_PROXY_URL,
+            targetUrl = process.env.REACT_APP_WARNINGS_URL;
         fetch(proxyUrl + targetUrl)
             .then(res => res.json())
             .then(
